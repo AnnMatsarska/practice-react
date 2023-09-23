@@ -1,6 +1,6 @@
 import { UsersListItem } from './UsersListItem';
 
-export function UsersList({ users, handleDlete }) {
+export function UsersList({ users, handleDelete, changeJobStatus }) {
   return (
     <ul>
       {users.map(({ id, name, email, hasJob }) => (
@@ -10,7 +10,8 @@ export function UsersList({ users, handleDlete }) {
             name={name}
             email={email}
             hasJob={hasJob}
-            handleDlete={handleDlete}
+            handleDelete={handleDelete}
+            changeJobStatus={changeJobStatus}
           />
         </li>
       ))}
